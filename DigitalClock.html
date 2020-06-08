@@ -1,0 +1,45 @@
+<html>
+<head><h1>Digital Clock</h1></head>
+<body>
+<h1 id ="dc"> </h1 id ="dc">
+</body>
+<script>
+
+function showTime()
+{
+    let date=new Date();
+	let h=date.getHours();
+	let m=date.getMinutes();
+	let s=date.getSeconds();
+	
+	let sesson="AM";
+	if(h==0)
+	h=12;
+	// if hour digit greater than 12 then print start from 1(13-12=1) 
+	if(h>12)
+	h=h-12;
+    session="PM";
+	/* if hour,min,sec less than 10 digit then print prefix before that =09,08 etc
+	
+	if(h<10)
+	h="0"+h;
+	if(m<10)
+	m="0"+m;
+	if(s<10)
+	s="0"+s;
+	*/
+	
+	h=(h<10)?"0"+h:h;
+		m=(m<10)?"0"+m:m;
+			s=(s<10)?"0"+s:s;
+	
+	let time=h+":"+m+":"+s+"     "+sesson;
+	
+	document.getElementById("dc").innerHTML=time;
+	setTimeout(showTime,1000);
+}
+showTime();
+</script>
+
+
+</html>

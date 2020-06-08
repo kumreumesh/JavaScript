@@ -1,0 +1,53 @@
+<html>
+
+<head>Calculator</head>
+<body>
+<input id="val1"/>
+<input id ="val2"/>
+<br>
+<button id="addBtn">Add</button>
+<button id="subBtn">sub</button>
+<button id="divBtn">div</button>
+<button id="mulBtn">mul</button>
+<p id="Result"/>
+
+</body>
+
+<script>
+document.getElementById("addBtn").onclick=add2num;
+document.getElementById("divBtn").onclick=div2num;
+document.getElementById("subBtn").onclick=sub2num;
+document.getElementById("mulBtn").onclick=mul2num;
+function add2num()
+{
+ let a=document.getElementById("val1").value;
+ let b=document.getElementById("val2").value;
+ let res=parseInt(a)+parseInt(b);
+ document.getElementById("Result").innerHTML=res;
+}
+
+function sub2num()
+{
+ let a=document.getElementById("val1").value;
+ let b=document.getElementById("val2").value;
+ let res=parseInt(a)-parseInt(b);
+ document.getElementById("Result").innerHTML=res;
+}
+
+function div2num()
+{
+ let a=document.getElementById("val1").value;
+ let b=document.getElementById("val2").value;
+ let res=parseInt(a)/parseInt(b);
+ document.getElementById("Result").innerHTML=res;
+}
+
+function mul2num()
+{
+ let a=document.getElementById("val1").value;
+ let b=document.getElementById("val2").value;
+ let res=parseInt(a)*parseInt(b);
+ document.getElementById("Result").innerHTML=res;
+}
+</script>
+</html>
